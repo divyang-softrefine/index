@@ -1,0 +1,409 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Colors : 
+Main : Teal Color : #087f5b
+Accent : Brown Color : 
+Grey Color : #495057
+
+Text-color : 343a40
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    width : 100%;
+    color :  #343a40;
+    border-bottom: 8px solid #087f5b;
+}
+
+.container {
+    width : clamp(10em,90%,60em);
+    height: auto;
+    margin : 0 auto;
+}
+
+
+/* ------------------------ */
+/* LAYOUT STYLES */
+/* ------------------------ */
+
+
+header {
+    display : flex;
+    flex-flow : row nowrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+header .hero {
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-self: center;
+    flex-basis: 400px;
+    min-width: 400px;
+    padding : 24px;
+}
+.header-text-box {
+    flex-grow: 2;
+    align-self: stretch;
+}
+
+header img {
+    
+    width: 100%;
+}
+header .header-text-box {
+    max-width: 30em;
+    display : flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+@media all and (max-width: 700px){
+    header {
+        flex-flow: wrap;
+    }
+}
+
+section:not(.testimonial-section)  {
+    display : flex;
+    flex-flow : column wrap;
+
+    align-items: stretch;
+}
+
+section .grid-3-cols{
+    display : grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap : 16px;
+    align-self: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.grid-3-cols *{
+    width: 100%;
+}
+
+.testimonial-section {
+    display : grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+.testimonial-section .img {
+    display : flex;
+    align-content: center;
+    justify-content: center;
+}
+.testimonial-section img{
+    width: 100%;
+    grid-column: 1;
+}
+.grid-3-cols figure{
+    min-width: 270px;
+}
+
+ @media all and (max-width : 700px){
+    .testimonial-section div{
+        width : fill;
+        height: fit-content;
+        grid-column: 1/-1;
+    }
+    .testimonial-box {
+        grid-column: 1/-1;
+    }
+    .features>div{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+li {
+    display : flex;
+    flex : row nowrap;
+    align-items: center;
+}
+.chair-price {
+    display: flex;
+    flex-flow : row nowrap;
+    align-items: flex-start;
+    gap : 12px;
+    justify-content: space-between;
+}
+
+.chair-price * {
+    width: fit-content;
+    height: auto;
+}
+
+.btn--small {
+    text-align: center;
+    
+}
+/* ------------------------ */
+/* Designing */
+/* ------------------------ */
+
+h1,h2,h3,h4,h5,h6 {
+    color : #78350f;
+}
+
+
+.btn {
+   
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding : 12px 16px;
+    font-size: 12px;
+    border-radius: 30px;
+}
+
+.btn--big {
+    padding : 16px 24px;
+    font-size: 16px;
+}
+
+.radius {
+    border-radius: 25px;
+}
+.feature-icons{
+    width : 32px;
+    color : #087f5b;
+}
+
+.chair-icon {
+    width : 24px;
+    color : #087f5b;
+}
+
+li {
+    list-style: none;
+}
+
+figure .radius {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px #a4a8ab;
+}
+
+.testimonial-section {
+    background-color: #087f5b;
+    padding: 24px 16px ;
+    color : white;
+}
+.testimonial-section h2{
+    color : white;
+}
+
+/* ------------------------ */
+/* Button hover animation */
+/* ------------------------ */
+
+.btn {
+    background-color : #087f5b;
+    color : white;
+    font-weight: 550;
+    transition: 0.15s ease-out;
+}
+.btn:hover {
+    box-shadow: 0px 0px 5px #84bfad;
+    background-color: #04402e;
+    transition: 0.15s ease-in;
+}
+
+
+/* ------------------------ */
+/* Spacing  */
+/* ------------------------ */
+
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+
+.container {
+    margin-top : 128px;
+}
+
+header {
+    gap : 32px;
+    margin: 128px 0px;
+}
+
+header .header-text-box {
+    align-self: stretch;
+    gap : 12px;
+}
+
+section { 
+    margin-bottom: 96px;
+}
+
+section h2{
+    margin-bottom: 48px;
+}
+
+.feature-icons {
+    margin-bottom: 12px;
+}
+
+.features-title {
+    margin-bottom: 8px;
+}
+
+.grid-3-cols{
+    gap : 64px 48px;
+}
+
+.testimonial-section{
+    gap: 32px;
+}
+
+.testimonial-section blockquote{
+    margin-bottom: 8px;
+}
+
+figure .chair-box{
+    padding : 0px 16px;
+    height : fit-content;
+}
+
+figure img{
+    margin-bottom: 8px;
+}
+
+figure h3{
+    margin-bottom: 16px;
+}
+
+figure li {
+    margin-bottom: 12px;
+}
+
+figure .chair-details {
+    margin-bottom: 24px;
+}
+
+figure .chair-price {
+    height : auto;
+}
+
+figure .chair-icon {
+    margin-right: 4px;
+}
+
+.chair {
+    display : flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-bottom : 32px;
+}
+
+
+
+footer {
+    margin-bottom: 24px;
+}
+
+
+
+/* FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* ------------------------ */
+/* FONT STYLING */
+/* ------------------------ */
+
+h1 {
+    font-size: 44px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    font-weight: 800;
+    font-style:normal;
+}
+
+header .header-text{
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+header .btn--big{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+h2{
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.testimonial-box h2{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.testimonial-section .testimonial-text{
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.testimonial-section .testimonial-author {
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+figure li {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.chair-price strong{
+    font-size : 24px;
+    letter-spacing: 2px;
+}
+
+footer {
+    text-align: center;
+}

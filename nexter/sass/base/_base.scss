@@ -1,0 +1,166 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+body{
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+*,*::after,*::before{
+    margin : 0;
+    padding : 0;
+    text-decoration: none;
+    outline : none;
+    color : inherit;
+}
+
+.img-box img{
+    height : 100%;
+    width : 100%;
+    &:not(.logos){
+    object-fit: cover;
+    }
+    object-fit : contain;
+    display : block;
+}
+
+ul,ol {
+    list-style: none;
+}
+
+.main-container{
+    grid-column: 2/3;
+    max-width: 95vw;
+    &>div{
+        max-width : 95vw;
+    }
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.btn{
+    background-color: #c69963;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    &:hover{
+        background-color: #B28451;
+    }
+}
+.logo-box{
+        img{
+            width : auto;
+            height : auto;
+        }
+}
+
+@media (max-width : 75em){
+    html{
+        font-size: 45%;
+    }
+
+    .houses-container > .house-card .home-stats{
+        grid-template-columns: 1fr;
+    }
+
+    .g-gap-medium{
+        row-gap: 2rem;
+        column-gap: 2rem;
+        gap : 2rem !important;
+    }
+
+    .logo-box {
+        img{
+            height :auto;
+            width : 40%;
+        }
+    }
+}
+
+@media (max-width : 62.5em){
+    .container {
+        &>*{
+            grid-column: 1/-1;
+        }
+
+        .main-container{
+            max-width: 100vw;
+            &>*{
+                max-width: 100vw;
+            }
+        }
+    }
+}
+
+@media (max-width : 50em){
+    .header-container{
+        grid-template-columns: 100% !important;
+    }
+    .realtors{
+        grid-template-columns: repeat(3,1fr) !important;
+        &>*:first-child{
+            grid-column: 1/-1;
+        }
+    }
+    .footer-container {
+        gap : 5rem !important;
+    }
+
+    .testimonial-container.g-c-2 {
+        grid-template-columns: 1fr;
+        &>*:last-child{
+            grid-row: 1;
+        }
+    }
+    .testimonial-photo {
+        &>*:last-child{
+            grid-column : 4/6 !important;
+            grid-row : 3/6 !important;
+        }
+    }
+}
+
+@media (max-width : 37.5em){
+    .footer-container .g-c-6{
+        grid-template-columns: repeat(3,1fr) !important;
+    }
+
+    .realtor-container {
+        padding-bottom: 5rem;
+    }
+
+    .hero{
+        height : 80vh !important;
+        padding : 3rem !important;
+    }
+
+    .main-container {
+        &>*:not(:first-child){
+            margin-top : 3rem !important;
+            margin-bottom: 0;
+            padding : 3rem !important;
+        }
+    }
+}

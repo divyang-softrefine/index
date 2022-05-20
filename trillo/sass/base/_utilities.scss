@@ -1,0 +1,28 @@
+// FLEX Utilities
+.u-flex {display : flex;}
+
+.u-flex-c {flex-direction: column;}
+
+.u-flex-nowrap {flex-wrap: nowrap;}
+.u-flex-wrap {flex-wrap: wrap;}
+
+.u-align-center {align-items: center;}
+
+.u-gap-zero {gap: 0;}
+.u-gap-small {gap : 1rem;}
+.u-gap-medium {gap : 4rem;}
+.u-gap-large {gap : 8rem;}
+.u-gap-largest {gap :12rem;}
+
+.u-flex-space-between {justify-content: space-between;}
+
+
+
+// MARGINS 
+
+.u-m-auto {margin-left: auto; margin-right: auto;}
+
+
+//typography
+.u-text-upper {text-transform: uppercase;}
+.u-text-center {text-align: center;}

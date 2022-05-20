@@ -1,0 +1,80 @@
+
+.g-grid { display : grid; }
+
+//COLUMNS
+.g-c-1 { grid-template-columns: 1fr; }
+
+.g-c-2 { grid-template-columns: 1fr 1fr; }
+.g-c-1-2 { grid-template-columns: 1fr 2fr;}
+.g-c-2-1 { grid-template-columns: 2fr 1fr; }
+
+.g-c-3 { grid-template-columns: repeat(3,1fr); }
+
+.g-c-4 { grid-template-columns: repeat(4,1fr); }
+
+// .g-c-5 { grid-template-columns: repeat(5,1fr); }
+
+.g-c-6 { grid-template-columns: repeat(6,1fr); }
+
+
+// GAPS
+
+.g-gap-zero { row-gap: 0; column-gap: 0; gap : 0; }
+.g-gap-smallest { row-gap : 1rem; column-gap: 1rem; gap : 1rem; }
+.g-gap-small { row-gap : 2rem; column-gap: 2rem; gap : 2rem; }
+.g-gap-medium { row-gap : 4rem; column-gap: 4rem; gap : 4rem; }
+.g-gap-large { row-gap : 6rem; column-gap: 6rem; gap : 6rem; }
+.g-gap-largest { row-gap: 8rem; column-gap: 8rem; gap : 8rem; }
+
+
+// ALIGNMENT ITEMS  (  Horizontal and Vertical )
+//                      horizontals             verticals
+.g-center { justify-items: center; align-items: center; }
+
+// ALIGMENT SELFS
+.g-align-start { align-self: start;}
+.g-align-center { align-self: center;}
+.g-align-stretch { align-self: stretch;}
+.g-align-end { align-self: end;}
+
+
+// Justify SELFS
+.g-justify-stretch { justify-self: stretch;}
+.g-justify-start { justify-self: start;}
+.g-justify-center { justify-self: center;}
+.g-justify-end { justify-self: end;}
+
+
+
+
+
+// CUSTOM GRIDS
+.container {
+    grid-template-columns: 5vw 95vw;
+}
+
+
+.grid-gallery {
+    grid-template-columns: repeat(8,1fr);
+    grid-template-areas:    "p1  p1  p2  p2  p2  p3  p4  p4"
+                            "p1  p1  p2  p2  p2  p3  p4  p4"
+                            "p5  p5  p2  p2  p2  p8  p8  p9"
+                            "p5  p5  p6  p6  p7  p8  p8  p9"
+                            "p5  p5  p6  p6  p13 p13 p13 p9"
+                            "p10 p11 p11 p12 p13 p13 p13 p14"
+                            "p10 p11 p11 p12 p13 p13 p13 p14";
+}
+.gallery-1{grid-area : p1;}
+.gallery-2{grid-area : p2;}
+.gallery-3{grid-area : p3;}
+.gallery-4{grid-area : p4;}
+.gallery-5{grid-area : p5;}
+.gallery-6{grid-area : p6;}
+.gallery-7{grid-area : p7;}
+.gallery-8{grid-area : p8;}
+.gallery-9{grid-area : p9;}
+.gallery-10{grid-area : p10;}
+.gallery-11{grid-area : p11;}
+.gallery-12{grid-area : p12;}
+.gallery-13{grid-area : p13;}
+.gallery-14{grid-area : p14;}

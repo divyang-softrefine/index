@@ -1,0 +1,21 @@
+.feature{
+    &s-container{
+        margin : 15rem auto;
+
+        grid-template-columns: repeat(auto-fit,minmax(auto,30rem));
+        gap : 8rem;
+    }
+
+    display: grid;
+    grid-template-columns: 3rem auto;
+    gap : 1rem;
+    
+
+    &>*:not(:first-child){
+        grid-column: 2;
+    }
+    .feature__icon{
+        height : 100%;
+        width : 100%;
+    }
+}

@@ -1,0 +1,25 @@
+.houses-container {
+    margin : 15rem auto;
+    grid-template-columns : repeat(auto-fit, minmax(15rem,25rem));
+
+    &>.house-card{
+        &>img{
+            width : 100%;
+        }
+        background-color: $color-grey-light-1;
+        .home-stats{
+            gap : 2rem;
+            padding : 2rem;
+            &>*{
+                display: grid;
+                grid-template-columns: 3rem auto;
+                font-size: 1.5rem;
+                &>ion-icon{
+                    height : 100%;
+                    width : 100%;
+                    color : $color-primary;
+                }
+            }
+        }
+    }
+}

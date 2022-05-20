@@ -1,0 +1,21 @@
+.footer-container{
+    padding : 8rem;
+    background-color: $color-secondary;
+    color : white;
+}
+.nav__item{
+    height : 4rem;
+}
+
+.nav__link{
+    display : block;
+    &:link,&:visited{
+    padding : 1.5rem;
+    transition : all 0.2s;
+    }
+    &:hover,&:active {
+        background-color: rgba(255,255,255,0.05);
+        transform: translateY(-3px);
+        transition: all 0.2s;
+    }
+}

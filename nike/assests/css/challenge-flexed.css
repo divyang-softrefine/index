@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    font-family : Roboto;
+    font-size : 14px;
+    box-sizing: border-box;
+}
+html {
+    background-color: #75acbe;
+}
+.bg {
+    
+    width: auto;
+    height: auto;
+    padding: 10vh 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap : 2em;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin : 0;
+}
+.product_ad {
+    height: fit-content;
+    width: 600px;
+    margin : 2vh 1vw;
+    background : linear-gradient(0deg, #396a79, #75acbe);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap : 10px;
+    padding : 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px #456d7a;
+    max-width: 1000px;
+}
+
+.pic-container {
+    display: flex;
+    padding: 3vh 0vw;
+    width: fit-content;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.pic-container .pic {
+    align-self: center;
+    height : auto;
+    width: 250px;
+}
+
+.info {
+    width: auto;
+    align-self: center;
+}
+.pic-container .shoe-size {
+    border : 1px solid #75acbe;
+    width : 45px;
+    height: 45px;
+    background-color: initial;
+    color : snow;
+    border-radius: 15px;
+    text-align: center;
+}
+.size-selector p{
+    text-align: center;
+}
+.pic-container .size-selector {
+    text-transform: uppercase;
+    color : #61e2e2;
+    align-self: center;
+    font-size: 16px;
+}
+
+.size-selector-outer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items : flex-start;
+    justify-content: space-around;
+    gap : 1em;
+    font-size: 20px;
+    padding-top: 2vh;
+}
+
+.head .name {
+    text-align: center;
+    font-size : 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+    color : snow;
+}
+
+.info .price{
+    color : #61e2e2;
+    font-size: 30px;
+    padding : 10px 0;
+}
+.info p{
+    font-size: 30px;
+    padding: 10px 0;
+}
+.info {
+    padding : 10px 0vw;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    color : snow;
+}
+.info .short {
+    justify-self: center;
+    align-self: center;
+}
+
+.info button {
+    margin-top: 1vh;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding : 10px 30px;
+    background-color: initial;
+    border : 2px solid #75abce;
+    border-radius: 25px;
+    color : #fdf5e6;
+}
+
+.product_ad button:hover {
+    box-shadow: 0px 0px 5px rgba(255, 250, 250, 0.514);
+}
+.head {
+    align-self: center;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.head h2{  
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    color : #61e2e2;
+    padding-bottom: 10px;
+}
+
+.product_ad:hover{
+    box-shadow: 0px 0px 15px snow;
+    transform: translate3d(0px,-10px,0px);
+    flex-grow: 2;
+    transition: 1s ease-out;
+}
+.product_ad:hover .info{
+    display : flex;
+    flex-flow : column wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    opacity: 1;
+    transition : opacity 1s linear;
+}
+.product_ad:hover .pic{
+    transform: rotate(-25deg);
+    transition : 1s linear;
+}
+.product_ad .pic-container{
+    transition : 1s linear;
+}
+.info {
+    display : none;
+    opacity : 0;
+    transition: opacity 1s linear;
+}
+.product_ad,.product_ad *{
+    flex-grow: 0;
+    transition: 0.5s ease-out ;
+}
+
+.product_ad button:hover, button:focus{
+    outline : none;
+}
+
+.head {
+    flex-basis: 100%;
+    flex-grow: 10;
+}
+
+.pic-container {
+    flex-basis: 40%;
+    flex-grow: 1;
+}
+
+.info {
+    flex-basis: 40%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}

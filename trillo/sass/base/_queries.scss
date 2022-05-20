@@ -1,0 +1,77 @@
+@media (max-width : 78.125em){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width : 61em){
+    .container {
+        padding : 0;
+        margin : 0rem !important;
+    }
+    .sidebar{
+        padding : 0 !important;
+        .copyright {
+            display: none;
+        }
+        .nav-list {
+            display: flex;
+            flex-flow: row nowrap;
+            width : 100%;
+            li{
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+@media (max-width : 37.5em){
+    html{
+        font-size: 35%;
+    }
+    .header{
+        padding: 2rem !important;
+        flex-direction: column;
+        align-items: center;
+        gap : 1rem;
+        height : auto !important;
+        width : 100%;
+        img{
+            width : 4rem;
+        }
+        &>*{
+            width : 100%;
+            padding : 0 !important;
+        }
+        &__user-container{
+            
+            justify-content: space-around;
+        }
+        &__logo-container{
+            display: flex;
+            justify-content: center;
+            &::after{
+                content : "Trillo";
+                color : $primary;
+                font-weight: 300;
+                font-size: 4rem;
+            }
+        }
+
+        .search{
+            align-items: center;
+        }
+    }
+
+    .section-heading-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .data-container{
+        flex-direction: column;
+        &>*{
+            width: 90% !important;
+            margin : 0 auto !important;
+        }
+    }
+}

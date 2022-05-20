@@ -1,0 +1,45 @@
+h1,h2,h3,h4,h5,h6,.heading-text {font-family: $font-display;}
+
+.u-text-center {text-align: center;}
+.u-text-upper {text-transform: uppercase;}
+
+body{
+    font-family: $font-primary;
+}
+
+.heading-1{
+    font-size: 4.5rem;
+}
+.heading-2{
+    font-size: 4rem;
+}
+.heading-3{
+    font-size: 1.6rem;
+    color : $color-primary;
+}
+.heading-4{
+    font-size: 1.9rem;
+    &--dark{
+        color: #54483A;
+    }
+    
+}
+.home__name{
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    justify-self: center;
+    -ms-flex-item-align: end;
+    align-self: end;
+    z-index: 3;
+    width: 80%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #101d2c;
+    color: #fff;
+    font-weight: 400;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+

@@ -1,0 +1,25 @@
+@keyframes pulsate {
+    0%{
+        color : inherit;
+        box-shadow: none;
+
+        box-shadow: 0 0 25px rgba(0,0,0, 0.3);
+        text-shadow: none;
+        transform: translateY(-3px);
+    }
+
+    50%{
+        color : $grey-dark-2;
+        text-shadow: 0 0 5px rgba($primary, 0.2);
+        box-shadow: none;
+        transform : translateY(3px);
+    }
+    100%{
+        color : inherit;
+        box-shadow: none;
+        text-shadow: none;
+
+        box-shadow: 0 0 25px rgba(0,0,0, 0.3);
+        transform: translateY(-3px);
+    }
+}

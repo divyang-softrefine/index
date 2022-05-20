@@ -1,0 +1,62 @@
+.popup{
+    position : fixed;
+    top : 0;
+    left : 0;
+    width: 100vw;
+    height : 100vh;
+    z-index: 9999;
+    background-color: rgba($black,0.3);
+    backdrop-filter: blur(3px);
+    @include clearfix;
+    transition: all 0.2s;
+    transform : scale(0);
+    opacity: 0;
+    visibility : none;
+
+    &__content{
+        width: 80vw;
+        background-color: $white;
+        position : absolute;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 5px;
+    }
+    &__left{
+        float : left;
+        width : 33%;
+        &>*{
+            width : 100%;
+        }
+    }
+
+    &__right {
+        float : right;
+        padding : 3rem;
+        width : 66%;
+    }
+
+    &__close{
+        position: absolute;
+        top : 3rem;
+        right : 3rem;
+        text-decoration: none;
+        color : inherit;
+        font-size: 3rem;
+        padding : 2rem;
+    }
+
+    &__text{
+        column-count: 2;
+        column-gap: 3rem;
+        column-rule: 1px solid $g-light;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    &:target{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,93 @@
+.header{
+    height : 7rem;
+    padding : 0 0 0 2rem;
+    background-color: $grey-light-1;
+    & *{
+        height : 100%;
+    }
+    &__logo{
+        height : 4rem;
+    }
+
+    &__search{
+        
+        &-container{
+            padding : 1rem;
+            width: fit-content;
+            &-inner{
+                box-shadow: 0 0 1.5rem rgba(0,0,0,0.3);
+                border-radius: 20rem;
+                padding : 0 1rem;
+                width: fit-content;
+                background-color: $grey-light-3;
+            }
+        }
+
+        &-bar{
+            border : none;
+            border-radius: 20rem;
+            width : 12rem;
+            transition : all 0.25s;
+            background-color: transparent;
+            &:focus{
+                padding : 0 1rem;
+                width : 25rem;
+            }
+        }
+        &-btn{
+            background-color: inherit;
+            border : none;
+            border-radius: 20rem;
+            &__icon {
+                height : 3rem;
+            }
+        }
+
+    }
+    &__search-bar{
+        height : 100%;
+    }
+    .menu{
+        &__btn{
+            padding: 1.75rem 1rem;
+            &:hover {
+                background-color: $grey-light-3;
+            }
+            height : 8rem;
+        }
+        &__user{
+            gap : 0.5rem;
+            &-logo{
+                border-radius: 50rem;
+            }
+        }
+        &__bookmark{
+            position : relative;
+            &::after{
+                content : "7";
+                background-color: $primary-light;
+                color : white;
+                padding : 2px 5px;
+                font-size: 1.2rem;
+                border-radius: 50%;
+                position: absolute;
+                top : 1.5rem;
+                right : 1.15rem;
+            }
+        }
+        &__inbox{
+            position : relative;
+            &::after{
+                content : "13";
+                background-color: $primary-light;
+                color : white;
+                padding : 2px 5px;
+                font-size: 1.2rem;
+                border-radius: 50%;
+                position: absolute;
+                top : 1.5rem;
+                right : 0.8rem;
+            }
+        }
+    }
+}

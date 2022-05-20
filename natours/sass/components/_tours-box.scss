@@ -1,0 +1,133 @@
+.tours-box{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position : relative;
+    @include clearfix;
+    min-height : 50rem;
+    margin-bottom: 5rem;
+    border-radius: $radius-small;
+    &:not(:last-child){
+        margin-right: 4rem;
+    }
+    &__side{
+        border-radius: $radius-small;
+        box-shadow: 0 0 25px rgba(0,0,0,0.05);    
+        min-height : 50rem;
+        font-size: 2rem;
+        transition : all 1s ease;
+        position : absolute;
+        top : 0;
+        left : 0;
+        width : 100%;
+        backface-visibility: hidden;
+        &--1 {
+            background-color: white;
+            color : $g-default;
+            .card-image{
+                height : 20rem;
+                background-size: cover;
+                background-position:center;
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+                &-1{
+                    background-image: linear-gradient(to right bottom, rgba($secondary-light,.7), rgba($secondary-medium,0.5)), url(../img/nat-5.jpg);
+                }
+                &-2{
+                    background-image: linear-gradient(to right bottom, rgba($light-mc,.7), rgba($dark-mc,0.5)), url(../img/nat-6.jpg);
+                }
+                &-3{
+                    background-image: linear-gradient(to right bottom, rgba($tertiary-light,.7), rgba($tertiary-medium,0.5)), url(../img/nat-7.jpg);
+                }
+            }
+
+            .card-heading {
+                &-1{
+                background-image: linear-gradient(to right bottom, rgba($secondary-light,.8), rgba($secondary-medium,.8));
+                }
+                &-2{
+                    background-image: linear-gradient(to right bottom, rgba($light-mc,.8), rgba($dark-mc,.8));
+                }
+                &-3{
+                    background-image: linear-gradient(to right bottom, rgba($tertiary-light,.8), rgba($tertiary-medium,.8));
+                }
+                color : $white;
+                text-align: right;
+                width : fit-content;
+                
+                position : absolute;
+                right : 2%;
+                &-primary {
+                    top : 20%;
+                }
+                &-subheading {
+                    top : 29%;
+                }
+
+                font-weight: 300;
+                font-size: 3rem;
+                line-height: 1.1;
+                padding : 1rem 0.5rem;
+            }
+
+            .card-details {
+                padding: 3rem 5rem;
+                & ul{
+                    list-style: none;
+                    margin : 0 3rem;
+                    & li{
+                        padding : 1rem 0;
+                        &:not(:last-child){
+                            border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+        
+        &--2 {
+            transform : rotateY(-180deg);
+            position : relative;
+            color : $white;
+
+            &-1{
+                //golden
+                background : linear-gradient(to right bottom, $secondary-light, $secondary-medium);
+            }
+            &-2{
+                //golden
+                background : linear-gradient(to right bottom, $light-mc, $dark-mc);
+            }
+            &-3{
+                //golden
+                background : linear-gradient(to right bottom, $tertiary-light, $tertiary-medium);
+            }
+
+            & .back-text {
+                position : absolute;
+                top : 50%;
+                left : 50%;
+                transform: translate(-50%,-50%);
+                width : 100%;
+                .only-text {
+                    font-size: 1rem;
+                }
+
+                .price {
+                    padding : 0;
+                    font-size: 6rem;
+                    font-weight: 200;
+                }
+            }
+        }
+
+    }
+
+    &:hover &__side--1 {
+        transform : rotateY(180deg);
+    }
+
+    &:hover &__side--2 {
+        transform : rotateY(0);
+    }
+
+
+}
